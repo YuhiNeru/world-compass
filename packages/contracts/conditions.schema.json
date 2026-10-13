@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "people",
+    "platform",
+    "required",
+    "preferred",
+    "excluded"
+  ],
+  "properties": {
+    "people": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "platform": {
+      "enum": [
+        "pc",
+        "quest",
+        null
+      ]
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "rain",
+          "night",
+          "chill",
+          "photo",
+          "nature",
+          "game",
+          "light"
+        ]
+      },
+      "maxItems": 7
+    },
+    "preferred": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "rain",
+          "night",
+          "chill",
+          "photo",
+          "nature",
+          "game",
+          "light"
+        ]
+      },
+      "maxItems": 7
+    },
+    "excluded": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "rain",
+          "night",
+          "chill",
+          "photo",
+          "nature",
+          "game",
+          "light"
+        ]
+      },
+      "maxItems": 7
+    }
+  }
+}

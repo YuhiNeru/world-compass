@@ -1,0 +1,22 @@
+{
+  "name": "world-compass",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/desktop"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/desktop",
+    "build": "npm run build -w apps/desktop",
+    "desktop": "npm run tauri -w apps/desktop -- dev",
+    "bundle": "npm run tauri -w apps/desktop -- build",
+    "test": "npm run test -w apps/desktop",
+    "test:browser": "playwright test -c apps/desktop/playwright.config.ts",
+    "test:rust": "cargo test --manifest-path apps/desktop/src-tauri/Cargo.toml --locked",
+    "verify": "npm run test && npm run build && npm run test:rust"
+  },
+  "devDependencies": {
+    "prettier": "3.8.1"
+  }
+}

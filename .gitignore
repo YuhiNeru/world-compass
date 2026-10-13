@@ -1,0 +1,16 @@
+node_modules/
+.npm-cache/
+dist/
+target/
+.runtime/
+artifacts/
+*.log
+*.sqlite*
+*.gguf
+*.zip
+*.exe
+*.dll
+.env*
+!*.example
+__pycache__/
+*.py[cod]

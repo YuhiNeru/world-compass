@@ -1,0 +1,28 @@
+[Unit]
+Description=World Compass public world collector
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=3600
+StartLimitBurst=10
+
+[Service]
+Type=simple
+User=worldcompass
+Group=worldcompass
+WorkingDirectory=/opt/world-compass-collector
+ExecStart=/usr/bin/python3 -u /opt/world-compass-collector/collector.py run --data-dir /var/lib/world-compass-collector
+Restart=on-failure
+RestartSec=60
+SuccessExitStatus=20
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/world-compass-collector
+MemoryMax=256M
+CPUQuota=50%
+TimeoutStopSec=35
+
+[Install]
+WantedBy=multi-user.target

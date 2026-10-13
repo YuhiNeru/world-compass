@@ -1,0 +1,22 @@
+{
+  "version": "japanese-expanded-v1",
+  "researchedAt": "2026-10-09",
+  "sources": [
+    {"name": "VRChatの世界 カテゴリー一覧", "url": "https://www.vrcw.net/category"},
+    {"name": "PlanetVRC ワールド探索", "url": "https://planetvrchat.net/archives/39114"},
+    {"name": "シアVR チル分類", "url": "https://sia-vr.com/category/genre/chill"},
+    {"name": "VRChat公式のワールド探索説明", "url": "https://help.vrchat.com/hc/en-us/articles/28526267258515-Getting-Started-with-VRChat"},
+    {"name": "検索APIのフィルター", "url": "https://vrchat.community/reference/search-worlds"}
+  ],
+  "categories": [
+    {"id":"daily","label":"チル・睡眠・ホーム・カフェ","priority":1,"terms":["チル","ちる","睡眠","V睡","寝","ホーム","カフェ","喫茶","雨音","くつろ","まったり","のんびり","作業","雑談","和室","温泉","サウナ"],"tags":["chill","sleep","home","cafe","relax","cozy"]},
+    {"id":"scenery","label":"景観・撮影・自然・和風","priority":2,"terms":["景観","景色","写真","撮影","自然","和風","日本庭園","神社","寺","桜","花畑","海","湖","森","星空","夜景","夕暮れ","幻想","廃墟","フォトグラメトリー"],"tags":["scenery","photo","photography","nature","japan","beautiful"]},
+    {"id":"games","label":"ゲーム・謎解き・協力・スポーツ","priority":3,"terms":["ゲーム","謎解き","パズル","脱出","協力","対戦","麻雀","ボードゲーム","釣り","料理","お絵描き","スポーツ","運動","アスレチック","卓球","ビリヤード","カート"],"tags":["game","puzzle","escape","udon","sport"]},
+    {"id":"social","label":"交流・初心者・集会・音楽","priority":4,"terms":["日本人","日本語","初心者","交流","集会","お話","バー","酒場","居酒屋","イベント","音楽","ライブ","ダンス","クラブ","カラオケ","ピアノ","楽器","演奏"],"tags":["social","hangout","music","dance","karaoke","dj"]},
+    {"id":"culture","label":"展示・観光・学習・アート","priority":5,"terms":["展示","美術","博物館","アート","観光","旅行","再現","学習","勉強","科学","歴史","図書","学校","街","都市","駅","列車","鉄道","飛行","宇宙","乗り物"],"tags":["art","museum","gallery","education","train","flight"]},
+    {"id":"special","label":"ホラー・冒険・季節・アバター","priority":6,"terms":["ホラー","恐怖","探索","冒険","リミナル","不思議","春","夏","秋","冬","花火","花見","ハロウィン","クリスマス","正月","七夕","誕生日","アバター","試着","サンプル","ポータル"],"tags":["horror","adventure","seasonal","avatar","portal"]},
+    {"id":"language","label":"日本語の取りこぼし補完","priority":7,"terms":["日本","日本語","Japan","Japanese","JPN","[JP]","JP/EN","JP⁄EN"],"tags":["jp","japanese","japan","jpn"]}
+  ],
+  "kanaSweep": true,
+  "creatorExpansion": true
+}

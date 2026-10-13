@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "worldId",
+          "evidence",
+          "unknown"
+        ],
+        "properties": {
+          "worldId": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "field",
+                "sourceId"
+              ],
+              "properties": {
+                "field": {
+                  "enum": [
+                    "capacity",
+                    "platforms",
+                    "rain",
+                    "night",
+                    "chill",
+                    "photo",
+                    "nature",
+                    "game",
+                    "light"
+                  ]
+                },
+                "sourceId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "unknown": {
+            "type": "array",
+            "maxItems": 10,
+            "items": {
+              "enum": [
+                "capacity",
+                "platforms",
+                "rain",
+                "night",
+                "chill",
+                "photo",
+                "nature",
+                "game",
+                "light"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"main":{"identifier":"main","description":"Application IPC only; no web filesystem or shell permissions","local":true,"windows":["main"],"permissions":["core:default"]}}

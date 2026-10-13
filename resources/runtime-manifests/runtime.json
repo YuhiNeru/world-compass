@@ -1,0 +1,10 @@
+{
+  "id": "runtime",
+  "version": "b11497",
+  "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11497/llama-b11497-bin-win-cpu-x64.zip",
+  "size": 19483323,
+  "sha256": "383e077ba791a85b04a09cef85a1050435f2eb4509c3dcddac77a4947997785e",
+  "license": "MIT",
+  "licenseUrl": "https://github.com/ggml-org/llama.cpp/blob/b11497/LICENSE",
+  "kind": "runtime"
+}
