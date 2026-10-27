@@ -12,7 +12,7 @@ Shared development PC: Node.js 24.22.1, Python.org 3.14.10, uv 0.13.6, pip 26.2.
 
 ## Validation and limits
 
-Frontend 50 tests and Rust 33 tests passed (one large model download test ignored). Updated native app passed isolated WebView2, search and SQLite chat persistence checks. Browser fixture suite: 5 passed, 2 navigation timeouts; not reported as a complete pass.
+Frontend 50 tests and Rust 33 tests passed (one large model download test ignored). Updated native app passed isolated WebView2, search and SQLite chat persistence checks. All 7 browser acceptance tests pass using the production frontend build on dedicated preview port 1437.
 
 Checks were run against the existing local working tree, which includes separately maintained changes. This commit intentionally contains only the security update and this record, preserving that other work. No PHP runtime or PHP application was found in the checked project and inspected PC/VPS environment. No exploit code was executed, TLS verification was not disabled, and repository visibility was not changed. Already installed copies on other PCs and provider-internal Cloudflare runtimes remain unverified. A normal HTTPS success alone is not evidence of rejecting the compromised key.
 
@@ -23,3 +23,7 @@ Checks were run against the existing local working tree, which includes separate
 - [Ubuntu Brotli backport](https://ubuntu.com/security/CVE-2026-111497)
 - [Git for Windows security release](https://github.com/git-for-windows/git/releases/tag/v2.56.0.windows.4)
 - [PHP official changelog](https://www.php.net/ChangeLog-8.php)
+
+## Browser verification follow-up: 2026-10-28
+
+The navigation timeout came from delayed Vite development-module responses before UI interaction. Standard Playwright now builds the production frontend and serves it on an exclusive preview port, without reusing an unrelated development server. Existing test assertions and workflows are unchanged. Native application code and user data were not changed.
